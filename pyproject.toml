@@ -1,0 +1,40 @@
+[project]
+name = "ignorante"
+version = "0.0.0"
+description = "CLI to generate .gitignore files by combining templates from github/gitignore, interactively or by name"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Jasper van Merle", email = "jaspervmerle@gmail.com" }]
+keywords = ["gitignore", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Programming Language :: Python :: 3"
+]
+requires-python = ">=3.12"
+dependencies = [
+    "platformdirs>=4.10.1",
+    "questionary>=2.1.1",
+    "typer>=0.27.0",
+]
+
+[project.scripts]
+ignorante = "ignorante.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.11.30,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.22",
+    "ty>=0.0.61",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I"]
