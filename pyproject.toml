@@ -1,10 +1,11 @@
 [project]
 name = "ignorante"
 version = "0.0.0"
+authors = [{ name = "Jasper van Merle", email = "jaspervmerle@gmail.com" }]
 description = "CLI to generate .gitignore files by combining templates from github/gitignore, interactively or by name"
+readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Jasper van Merle", email = "jaspervmerle@gmail.com" }]
 keywords = ["gitignore", "cli"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -19,6 +20,11 @@ dependencies = [
     "questionary>=2.1.1",
     "typer>=0.27.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/jmerle/ignorante"
+Issues = "https://github.com/jmerle/ignorante/issues"
+Changelog = "https://github.com/jmerle/ignorante/releases"
 
 [project.scripts]
 ignorante = "ignorante.__main__:main"
